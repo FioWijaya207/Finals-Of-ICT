@@ -1,0 +1,27 @@
+style.css
+body {
+    font-family: Arial;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    margin: 20px;
+}
+
+a {
+    color: cyan;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 20px;
+}
+
+a:hover {
+    color: yellow;
+}
+
+ul {
+    list-style-position: inside;
+}
