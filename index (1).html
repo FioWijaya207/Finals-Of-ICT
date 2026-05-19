@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GymPE — Physical Education Gymnastics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <span class="logo-badge">🤸</span>
+      <div>
+        <h1>GymPE</h1>
+        <p class="header-sub">Physical Education — Gymnastics</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-left">
+      <a href="#home">Home</a>
+      <a href="#exercises">Exercises</a>
+      <a href="#log">Activity Log</a>
+    </div>
+    <div class="nav-right">
+      <div class="dropdown">
+        <button class="dropbtn">Menu ▾</button>
+        <div class="dropdown-content">
+          <a href="#handstand">Handstand</a>
+          <a href="#backarch">Back Arch</a>
+          <a href="#stretching">Stretching</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="hero-section">
+      <div class="hero-text">
+        <h2>Build Strength &amp; Flexibility</h2>
+        <p>Master the fundamentals of gymnastics with structured exercises in handstands, back arches, and stretching — designed for your PE class.</p>
+        <a href="#exercises" class="cta-btn">Explore Exercises</a>
+      </div>
+      <div class="hero-icons">
+        <div class="hero-icon-box">🤸‍♂️<br/><span>Handstand</span></div>
+        <div class="hero-icon-box">🌉<br/><span>Back Arch</span></div>
+        <div class="hero-icon-box">🧘<br/><span>Stretching</span></div>
+      </div>
+    </section>
+
+    <!-- EXERCISES -->
+    <section id="exercises">
+      <h2 class="section-title">Core Exercises</h2>
+
+      <!-- Handstand -->
+      <div class="exercise-card" id="handstand">
+        <div class="exercise-badge" style="background:#d97706;">Skill</div>
+        <h3>🤸‍♂️ Handstand</h3>
+        <p>The handstand is a foundational gymnastics skill that builds shoulder strength, core stability, and body awareness. It requires balance, alignment, and consistent practice.</p>
+        <h4>How to Perform:</h4>
+        <ol>
+          <li>Stand facing a wall, arms raised overhead.</li>
+          <li>Step forward and place both hands flat on the floor, shoulder-width apart.</li>
+          <li>Kick one leg up and follow with the other so both legs reach the wall.</li>
+          <li>Keep arms straight, core tight, and body in one straight line.</li>
+          <li>Hold for 5–10 seconds. Lower down with control.</li>
+        </ol>
+        <div class="tips-box">
+          <strong>💡 Tips:</strong> Look at your hands, not forward. Spread your fingers wide for better balance. Practice against a wall first before attempting freestanding.
+        </div>
+      </div>
+
+      <!-- Back Arch -->
+      <div class="exercise-card" id="backarch">
+        <div class="exercise-badge" style="background:#b45309;">Flexibility</div>
+        <h3>🌉 The Back Arch (Bridge)</h3>
+        <p>The back arch (bridge pose) develops spinal flexibility, strengthens the back and glutes, and opens the chest and shoulders. It is a key gymnastics movement for backbends and walkovers.</p>
+        <h4>How to Perform:</h4>
+        <ol>
+          <li>Lie on your back with knees bent and feet flat, hip-width apart.</li>
+          <li>Place hands beside your ears, fingers pointing toward your shoulders.</li>
+          <li>Press through your feet and hands to lift your hips toward the ceiling.</li>
+          <li>Straighten your arms fully and arch your back into a bridge shape.</li>
+          <li>Hold for 5–10 seconds, then slowly lower yourself back down.</li>
+        </ol>
+        <div class="tips-box">
+          <strong>💡 Tips:</strong> Warm up your spine beforehand. Keep feet parallel. If wrists hurt, build wrist flexibility separately before attempting.
+        </div>
+      </div>
+
+      <!-- Stretching -->
+      <div class="exercise-card" id="stretching">
+        <div class="exercise-badge" style="background:#92400e;">Warm-Up</div>
+        <h3>🧘 Stretching Exercises</h3>
+        <p>Stretching improves range of motion, prevents injury, and prepares your muscles for gymnastics work. Always stretch before and after practice sessions.</p>
+        <h4>Essential Stretches:</h4>
+        <ul>
+          <li><strong>Seated Forward Fold:</strong> Sit with legs straight, reach forward and hold for 20 sec.</li>
+          <li><strong>Butterfly Stretch:</strong> Sit with soles of feet together, press knees toward floor.</li>
+          <li><strong>Shoulder Stretch:</strong> Bring one arm across your chest, hold with the other arm, 20 sec each side.</li>
+          <li><strong>Hip Flexor Lunge:</strong> Step one foot forward into a lunge, lower back knee to floor. Hold 20 sec each side.</li>
+          <li><strong>Cobra Pose:</strong> Lie face down, press up through hands to arch your upper back.</li>
+        </ul>
+        <div class="tips-box">
+          <strong>💡 Tips:</strong> Never bounce while stretching. Breathe steadily. Stretch only to mild discomfort, not pain.
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITY LOG -->
+    <section id="log">
+      <h2 class="section-title">Activity Log</h2>
+      <div class="card">
+        <h3 style="margin-top:0;">Record Your Practice</h3>
+        <label for="activityTitle">Activity Title</label>
+        <input type="text" id="activityTitle" placeholder="e.g. Handstand – Wall Practice" />
+
+        <label for="description">Notes / Description</label>
+        <textarea id="description" rows="3" placeholder="e.g. Held 10 seconds, need to work on arm alignment..."></textarea>
+
+        <label for="activityImage">Upload a Photo</label>
+        <input type="file" id="activityImage" accept="image/*" />
+
+        <button onclick="saveActivity()" style="margin-top:5px;">Save Activity</button>
+      </div>
+
+      <div id="activityList" style="margin-top:25px;"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>GymPE &copy; 2025 — Physical Education Gymnastics</p>
+    <p style="font-size:13px; opacity:0.85;">Handstand · Back Arch · Stretching Exercises</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
